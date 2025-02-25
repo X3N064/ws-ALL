@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collaborative Editor</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+</head>
+<body>
+    <h2>실시간 협업 문서</h2>
+    <p>현재 접속 중인 사용자: <span id="user-count">0</span></p>
+    <div id="user-list"></div>
+    
+    <div id="document-container">
+        <div id="editor" contenteditable="true"></div>
+    </div>
+
+    <div id="cursor-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>

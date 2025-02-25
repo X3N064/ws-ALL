@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+h2 {
+    color: #333;
+}
+
+p {
+    font-size: 14px;
+}
+
+#user-list {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.user-icon {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    position: relative;
+}
+
+.user-icon:hover::after {
+    content: attr(data-name);
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+/* 📄 구글 Docs 스타일 문서 컨테이너 */
+#document-container {
+    width: 60%;
+    margin: 20px auto;
+    background: white;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    min-height: 800px;
+    max-width: 800px;
+}
+
+/* 📝 문서 입력창 (A4 스타일) */
+#editor {
+    min-height: 800px;
+    outline: none;
+    font-size: 16px;
+    line-height: 1.5;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+/* 커서 스타일 */
+.cursor {
+    position: absolute;
+    width: 2px;
+    height: 20px;
+    transition: left 0.1s ease-out, top 0.1s ease-out;
+}
+
+.blinking-cursor {
+    animation: blink 0.8s infinite alternate;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
